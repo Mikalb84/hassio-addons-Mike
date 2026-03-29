@@ -1,0 +1,28 @@
+{
+  "name": "Hoymiles MQTT (DTU-Pro-S)",
+  "version": "1.0.0",
+  "slug": "hoymiles_mqtt",
+  "description": "Local Modbus → MQTT for Hoymiles DTU-Pro-S (5s refresh)",
+  "startup": "application",
+  "arch": ["amd64", "aarch64", "armv7"],
+  "boot": "auto",
+  "host_network": true,
+  "options": {
+    "dtu_host": "192.168.0.9",
+    "dtu_port": 502,
+    "query_period": 5,
+    "mqtt_host": "192.168.0.64",
+    "mqtt_port": 1883,
+    "mqtt_user": "mike",
+    "mqtt_pass": "Mqtt841344"
+  },
+  "schema": {
+    "dtu_host": "str",
+    "dtu_port": "int",
+    "query_period": "int",
+    "mqtt_host": "str",
+    "mqtt_port": "int",
+    "mqtt_user": "str",
+    "mqtt_pass": "str"
+  }
+}
