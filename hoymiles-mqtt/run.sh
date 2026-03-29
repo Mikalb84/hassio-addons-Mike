@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-echo "Starting Hoymiles-MQTT..."
+echo "Starting Hoymiles-MQTT add-on..."
 
-# Generate configuration file
+# Create the config.yaml used by hoymiles-mqtt
 cat <<EOF > /app/config.yaml
 mqtt:
   host: ${MQTT_HOST}
@@ -22,4 +22,3 @@ cat /app/config.yaml
 
 echo "Launching Hoymiles MQTT..."
 python3 -m hoymiles_mqtt --config /app/config.yaml
-``
